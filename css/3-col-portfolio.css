@@ -21,3 +21,8 @@ body {
 .pagination {
     margin-bottom: 30px;
 }
+
+.card-img-top {
+	width: 50%;
+	margin: auto;
+}
