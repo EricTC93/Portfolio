@@ -2,7 +2,7 @@ const apps = [
 	{
 		title:"News-Scraper",
 		link:"https://news-scraper-etc.herokuapp.com",
-		github:"",
+		github:"https://github.com/YETC7/News-Scraper",
 		description:"Website that scrapes from a news source and allows users to comment on them.",
 		creator:"Sole Developer",
 		img:"./img/News-Scraper.PNG"
@@ -10,17 +10,43 @@ const apps = [
 
 ];
 
-let $divRow = $("<div>");
+// let $divRow = $("<div>");
 
-let $divItem = $("<div>").addClass("col-lg-4 col-sm-6 portfolio-item");
-let $divCard = $("<div>").addClass("card h-100");
-let $a1 = $("<a>").attr("href","https://news-scraper-etc.herokuapp.com");
-let $img = $("img").addClass("card-img-top").attr("src","https://news-scraper-etc.herokuapp.com");
-let $divBody = $("<div>").addClass("card-body");
-let $h4 = $("<h4>").addClass("card-title");
-let $a2 = $("<a>").attr("href","https://news-scraper-etc.herokuapp.com").text("News-Scraper");
-let $pText = $("<p>").addClass("card-text").text("Website that scrapes from a news source and allows users to comment on them.");
-let $pDeveloper = $("<p>").text("Sole Developer");
+// let $divItem = $("<div>").addClass("col-lg-4 col-sm-6 portfolio-item");
+// let $divCard = $("<div>").addClass("card h-100");
+// let $a1 = $("<a>").addClass("text-center").attr("href","https://news-scraper-etc.herokuapp.com");
+// let $img = $("<img>").addClass("card-img-top").attr("src","https://news-scraper-etc.herokuapp.com");
+// let $divBody = $("<div>").addClass("card-body");
+// let $h4 = $("<h4>").addClass("card-title");
+// let $a2 = $("<a>").attr("href","https://news-scraper-etc.herokuapp.com").text("News-Scraper");
+// let $pText = $("<p>").addClass("card-text").text("Website that scrapes from a news source and allows users to comment on them.");
+// let $pDeveloper = $("<p>").text("Sole Developer");
 
+// $divItem.append($divCard);
+// $divCard.append($a1);
+// $a1.html('<img class="card-img-top" src="./img/News-Scraper.PNG" alt="">');
+// $divCard.append($divBody);
+// $divBody.append($h4);
+// $h4.append($a2);
+// $divBody.append($pText);
+// $divBody.append($pDeveloper);
 
+// $("#container").prepend($divItem);
+
+let $divItem = $("<div>");
+$($divItem).html(
+`<div class="col-lg-4 col-sm-6 portfolio-item">
+	<div class="card h-100">
+		<a class="text-center" href="${apps[0].link}"><img class="card-img-top" src="${apps[0].img}" alt=""></a>
+		<div class="card-body">
+			<h4 class="card-title">
+				<a href="${apps[0].link}">${apps[0].title}</a>
+			</h4>
+			<p class="card-text">${apps[0].description}</p>
+			<p>${apps[0].creator}</p>
+		</div>
+	</div>
+</div>`);
+
+$("#container").prepend($divItem);
 
