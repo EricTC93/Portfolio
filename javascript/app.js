@@ -1,3 +1,5 @@
+const gitHubIcon = "./img/githubIcon.png";
+
 const apps = [
 	{
 		title:"News-Scraper",
@@ -6,6 +8,42 @@ const apps = [
 		description:"Website that scrapes from a news source and allows users to comment on them.",
 		creator:"Sole Developer",
 		img:"./img/News-Scraper.PNG"
+	},
+
+	{
+		title:"Flash-Roulette",
+		link:"https://flash-roulette-meed.herokuapp.com/",
+		github:"https://github.com/edricwong28/Flash-Roulette",
+		description:"A game of Flash Roulette.",
+		creator:"Co-Developer (Back-end)",
+		img:"./img/Roulette_Home.PNG"
+	},
+
+	{
+		title:"Sequelized-Burger",
+		link:"https://burger-eater-sequelize-etc.herokuapp.com/",
+		github:"https://github.com/YETC7/Sequelized-Burger",
+		description:"A page that changes with user interaction that uses Sequelize.",
+		creator:"Sole Developer",
+		img:"./img/Burger-Eater.PNG"
+	},
+
+	{
+		title:"Burger-Eater",
+		link:"https://friend-finder-etc.herokuapp.com",
+		github:"https://github.com/YETC7/Burger-Eater",
+		description:"Application that creates, reads and update data on a mysql server.",
+		creator:"Sole Developer",
+		img:"./img/Burger-Eater.PNG"
+	},
+
+	{
+		title:"FriendFinder",
+		link:"https://news-scraper-etc.herokuapp.com",
+		github:"https://github.com/YETC7/News-Scraper",
+		description:"Compares users' input in attempt to match users together. Uses node, express, and mysql.",
+		creator:"Sole Developer",
+		img:"./img/Friend-Finder.PNG"
 	},
 
 ];
@@ -33,20 +71,27 @@ const apps = [
 
 // $("#container").prepend($divItem);
 
-let $divItem = $("<div>");
-$($divItem).html(
-`<div class="col-lg-4 col-sm-6 portfolio-item">
-	<div class="card h-100">
-		<a class="text-center" href="${apps[0].link}"><img class="card-img-top" src="${apps[0].img}" alt=""></a>
-		<div class="card-body">
-			<h4 class="card-title">
-				<a href="${apps[0].link}">${apps[0].title}</a>
-			</h4>
-			<p class="card-text">${apps[0].description}</p>
-			<p>${apps[0].creator}</p>
-		</div>
-	</div>
-</div>`);
+let $divRow = $("<div>").addClass("row");
 
-$("#container").prepend($divItem);
+for(let i = 0; i<apps.length; i++) {
+	let $divItem = $("<div>").addClass("col-lg-4 col-sm-6 portfolio-item");
+
+	$($divItem).html(
+	`
+		<div class="card h-100">
+			<a class="text-center" href="${apps[i].link}"><img class="card-img-top" src="${apps[i].img}" alt=""></a>
+			<div class="card-body">
+				<h4 class="card-title">
+					<a href="${apps[i].link}">${apps[i].title}</a>
+				</h4>
+				<p class="card-text">${apps[i].description}</p>
+				<p>${apps[i].creator}</p>
+			</div>
+		</div>
+	`);
+
+	$divRow.append($divItem);
+}
+
+$("#container").append($divRow);
 
