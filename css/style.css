@@ -1,5 +1,9 @@
 #profilePicture {
 	margin-left: 40px;
-	margin-top: 20px;
 	margin-bottom: 20px;
+
+	max-width: 300px;
+
+	border: 5px solid #00001a;
+
 }
