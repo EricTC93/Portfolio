@@ -1,5 +1,3 @@
-const gitHubIcon = "./img/githubIcon.png";
-
 const apps = [
 	{
 		title:"News-Scraper",
@@ -39,37 +37,104 @@ const apps = [
 
 	{
 		title:"FriendFinder",
-		link:"https://news-scraper-etc.herokuapp.com",
-		github:"https://github.com/YETC7/News-Scraper",
+		link:"https://friend-finder-etc.herokuapp.com",
+		github:"https://github.com/YETC7/FriendFinder",
 		description:"Compares users' input in attempt to match users together. Uses node, express, and mysql.",
 		creator:"Sole Developer",
 		img:"./img/Friend-Finder.PNG"
 	},
 
+	{
+		title:"Bamazon",
+		link:"https://github.com/YETC7/Bamazon",
+		github:"https://github.com/YETC7/Bamazon",
+		description:"An Amazon-like client that uses MySQL and Node.js.",
+		creator:"Sole Developer",
+		img:"./img/Node-Icon.png"
+	},
+
+	{
+		title:"Flashcard-Generator",
+		link:"https://github.com/YETC7/Flashcard-Generator",
+		github:"https://github.com/YETC7/Flashcard-Generator",
+		description:"A javascript application that creates basics and cloze-deleted flashcards.",
+		creator:"Sole Developer",
+		img:"./img/Node-Icon.png"
+	},
+
+	{
+		title:"liri-node-app",
+		link:"https://github.com/YETC7/liri-node-app",
+		github:"https://github.com/YETC7/liri-node-app",
+		description:"Language Interpretation and Recognition Interface. Uses node to take user input to output data.",
+		creator:"Sole Developer",
+		img:"./img/Node-Icon.png"
+	},
+
+	{
+		title:"Train-Scheduler",
+		link:"https://yetc7.github.io/Train-Scheduler/",
+		github:"https://github.com/YETC7/Train-Scheduler",
+		description:"Creating a basic train schedule that uses java and firebase.",
+		creator:"Sole Developer",
+		img:"./img/Train-Scheduler.PNG"
+	},
+
+	{
+		title:"Right Here, Right Now",
+		link:"https://conditionschange.github.io/Right-Here-Right-Now/",
+		github:"https://github.com/ConditionsChange/Right-Here-Right-Now",
+		description:"User is bored and looking for something to do. User inputs location and something they might be interested in doing. Using various APIs, the app will pull up events, restaurants, movies, and other interesting happening in the area. It will also pull up the weather so that user can appropriately plan.",
+		creator:"Co-Developer",
+		img:"./img/Right-Here-Right-Now.PNG"
+	},
+
+	{
+		title:"GifTastic",
+		link:"https://yetc7.github.io/GifTastic/",
+		github:"https://github.com/YETC7/GifTastic",
+		description:"Creating a website that displays gifs based on keywords using java and API.",
+		creator:"Sole Developer",
+		img:"./img/GifTastic.png"
+	},
+
+	{
+		title:"TriviaGame",
+		link:"https://yetc7.github.io/TriviaGame/",
+		github:"https://github.com/YETC7/TriviaGame",
+		description:"Trivia Game using jQuery.",
+		creator:"Sole Developer",
+		img:"./img/Trivia-Game-Home.PNG"
+	},
+
+	{
+		title:"Hangman-Game",
+		link:"https://yetc7.github.io/Hangman-Game/",
+		github:"https://github.com/YETC7/Hangman-Game",
+		description:"User plays hangman with the computer.",
+		creator:"Sole Developer",
+		img:"./img/Hangman.PNG"
+	},
+
+	{
+		title:"Paper-RPG",
+		link:"https://yetc7.github.io/Paper-RPG/",
+		github:"https://github.com/YETC7/Paper-RPG",
+		description:"Interactive game using jquery.",
+		creator:"Sole Developer",
+		img:"./img/Paper-RPG.PNG"
+	},
+
+	{
+		title:"Psychic-Game",
+		link:"https://yetc7.github.io/Psychic-Game/",
+		github:"https://github.com/YETC7/Psychic-Game",
+		description:"User tries to guess what letter the computer has picked.",
+		creator:"Sole Developer",
+		img:"./img/Psychic-Game.PNG"
+	},
+
 ];
-
-// let $divRow = $("<div>");
-
-// let $divItem = $("<div>").addClass("col-lg-4 col-sm-6 portfolio-item");
-// let $divCard = $("<div>").addClass("card h-100");
-// let $a1 = $("<a>").addClass("text-center").attr("href","https://news-scraper-etc.herokuapp.com");
-// let $img = $("<img>").addClass("card-img-top").attr("src","https://news-scraper-etc.herokuapp.com");
-// let $divBody = $("<div>").addClass("card-body");
-// let $h4 = $("<h4>").addClass("card-title");
-// let $a2 = $("<a>").attr("href","https://news-scraper-etc.herokuapp.com").text("News-Scraper");
-// let $pText = $("<p>").addClass("card-text").text("Website that scrapes from a news source and allows users to comment on them.");
-// let $pDeveloper = $("<p>").text("Sole Developer");
-
-// $divItem.append($divCard);
-// $divCard.append($a1);
-// $a1.html('<img class="card-img-top" src="./img/News-Scraper.PNG" alt="">');
-// $divCard.append($divBody);
-// $divBody.append($h4);
-// $h4.append($a2);
-// $divBody.append($pText);
-// $divBody.append($pDeveloper);
-
-// $("#container").prepend($divItem);
 
 let $divRow = $("<div>").addClass("row");
 
@@ -79,13 +144,14 @@ for(let i = 0; i<apps.length; i++) {
 	$($divItem).html(
 	`
 		<div class="card h-100">
-			<a class="text-center" href="${apps[i].link}"><img class="card-img-top" src="${apps[i].img}" alt=""></a>
+			<a class="text-center" href="${apps[i].link}" target="_blank"><img class="card-img-top" src="${apps[i].img}" alt=""></a>
 			<div class="card-body">
 				<h4 class="card-title">
-					<a href="${apps[i].link}">${apps[i].title}</a>
+					<a href="${apps[i].link}" target="_blank">${apps[i].title}</a>
 				</h4>
 				<p class="card-text">${apps[i].description}</p>
 				<p>${apps[i].creator}</p>
+				<a class="githubIcon" href="${apps[i].github}" target="_blank"><img width="30px" height="auto" src="./img/githubIcon.png" alt=""></a>
 			</div>
 		</div>
 	`);

@@ -7,3 +7,8 @@
 	border: 5px solid #00001a;
 
 }
+
+.githubIcon {
+	position: absolute;
+	bottom: 10px;
+}
