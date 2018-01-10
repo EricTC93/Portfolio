@@ -12,3 +12,7 @@
 	position: absolute;
 	bottom: 10px;
 }
+
+.card-text, .info-text {
+	color: black;
+}

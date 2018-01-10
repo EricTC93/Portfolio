@@ -95,7 +95,7 @@ const apps = [
 		github:"https://github.com/YETC7/GifTastic",
 		description:"Creating a website that displays gifs based on keywords using java and API.",
 		creator:"Sole Developer",
-		img:"./img/GifTastic.png"
+		img:""
 	},
 
 	{
@@ -136,12 +136,10 @@ const apps = [
 
 ];
 
-let $divRow = $("<div>").addClass("row");
-
 for(let i = 0; i<apps.length; i++) {
-	let $divItem = $("<div>").addClass("col-lg-4 col-sm-6 portfolio-item");
+	let $divItemHead = $("<div>").addClass("aplicationHead");
 
-	$($divItem).html(
+	$($divItemHead).html(
 	`
 		<div class="card h-100">
 			<a class="text-center" href="${apps[i].link}" target="_blank"><img class="card-img-top" src="${apps[i].img}" alt=""></a>
@@ -150,14 +148,47 @@ for(let i = 0; i<apps.length; i++) {
 					<a href="${apps[i].link}" target="_blank">${apps[i].title}</a>
 				</h4>
 				<p class="card-text">${apps[i].description}</p>
-				<p>${apps[i].creator}</p>
+				<p class="info-text>${apps[i].creator}</p>
 				<a class="githubIcon" href="${apps[i].github}" target="_blank"><img width="30px" height="auto" src="./img/githubIcon.png" alt=""></a>
 			</div>
 		</div>
 	`);
 
-	$divRow.append($divItem);
+	let $divItemNav = $("<div>").addClass("applicationNav");
+
+	$($divItemNav).html(
+	`
+		<div class="card h-100">
+			<a class="text-center" href="${apps[i].link}" target="_blank"><img class="card-img-top" src="${apps[i].img}" alt=""></a>
+			<div class="card-body">
+				<h4 class="card-title">
+					<a href="${apps[i].link}" target="_blank">${apps[i].title}</a>
+				</h4>
+			</div>
+		</div>
+	`);
+
+	$("#appShow").append($divItemHead);
+	$("#appsContainer").append($divItemNav);
 }
 
-$("#container").append($divRow);
 
+
+$("#appShow").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '#appsContainer'
+});
+
+$("#appsContainer").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '#appShow',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true,
+  autoplay: true,
+  autoplaySpeed: 5000
+});
