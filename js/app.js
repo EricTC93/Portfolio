@@ -187,7 +187,7 @@ for(let i = 0; i<apps.length; i++) {
 
 	$($divItemNav).html(
 	`
-		<div class="card h-100">
+		<div class="card h-100 navCard">
 			<img id="navAppImg" class="card-img-top" src="${apps[i].img}" alt="">
 			<div class="card-body">
 				<h4 class="card-title">${apps[i].title}</h4>

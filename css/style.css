@@ -26,8 +26,12 @@
 	margin: auto;
 }
 
+.navCard {
+	margin: 10px;
+}
+
 #headAppImg {
-	max-height: 200px;
+	max-height: 250px;
 	width: auto;
 	margin: auto;
 }
