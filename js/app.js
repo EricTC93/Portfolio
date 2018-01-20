@@ -54,7 +54,7 @@ const apps = [
 	},
 
 	{
-		title:"FriendFinder",
+		title:"Friend-Finder",
 		link:"https://friend-finder-etc.herokuapp.com",
 		github:"https://github.com/YETC7/FriendFinder",
 		description:"Compares users' input in attempt to match users together. Uses node, express, and mysql.",
@@ -113,7 +113,7 @@ const apps = [
 		github:"https://github.com/YETC7/GifTastic",
 		description:"Creating a website that displays gifs based on keywords using java and API.",
 		creator:"Sole Developer",
-		img:""
+		img:"./img/GifTastic.png"
 	},
 
 	{
@@ -159,15 +159,26 @@ for(let i = 0; i<apps.length; i++) {
 
 	$($divItemHead).html(
 	`
-		<div class="card h-100">
-			<a class="text-center" href="${apps[i].link}" target="_blank"><img class="card-img-top" src="${apps[i].img}" alt=""></a>
+		<div class="card headCard">
+			<div class="card-header">
+				<ul class="nav nav-tabs card-header-tabs">
+					<li class="nav-item">
+				    	<a class="nav-link" href="${apps[i].link}" target="_blank">App</a>
+				    </li>
+
+				    <li class="nav-item">
+				    	<a class="nav-link" href="${apps[i].github}" target="_blank">Github</a>
+				    </li>
+				</ul>
+			</div>
+			<a class="text-center" href="${apps[i].link}" target="_blank"><img id="headAppImg" class="card-img-top" src="${apps[i].img}" alt=""></a>
 			<div class="card-body">
 				<h4 class="card-title">
 					<a href="${apps[i].link}" target="_blank">${apps[i].title}</a>
 				</h4>
 				<p class="card-text">${apps[i].description}</p>
 				<p class="info-text">${apps[i].creator}</p>
-				<a class="githubIcon" href="${apps[i].github}" target="_blank"><img width="30px" height="auto" src="./img/githubIcon.png" alt=""></a>
+				<!-- <a class="githubIcon pull-left" href="${apps[i].github}" target="_blank"><img width="30px" height="auto" src="./img/githubIcon.png" alt=""></a> -->
 			</div>
 		</div>
 	`);
@@ -177,11 +188,9 @@ for(let i = 0; i<apps.length; i++) {
 	$($divItemNav).html(
 	`
 		<div class="card h-100">
-			<a class="text-center" href="${apps[i].link}" target="_blank"><img class="card-img-top" src="${apps[i].img}" alt=""></a>
+			<img id="navAppImg" class="card-img-top" src="${apps[i].img}" alt="">
 			<div class="card-body">
-				<h4 class="card-title">
-					<a href="${apps[i].link}" target="_blank">${apps[i].title}</a>
-				</h4>
+				<h4 class="card-title">${apps[i].title}</h4>
 			</div>
 		</div>
 	`);

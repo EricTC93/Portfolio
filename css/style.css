@@ -11,8 +11,31 @@
 .githubIcon {
 /*	position: absolute;
 	bottom: 10px;*/
+	margin: 0px;
 }
 
 .card-text, .info-text {
 	color: black;
+}
+
+.card-title {
+	color: #42dca3;
+}
+
+.headCard {
+	margin: auto;
+}
+
+#headAppImg {
+	max-height: 200px;
+	width: auto;
+	margin: auto;
+}
+
+#navAppImg {
+/*	max-height: 100px;
+	max-width: 200px;
+	height: auto;
+	width: auto;
+	margin: auto;*/
 }
