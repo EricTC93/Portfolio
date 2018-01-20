@@ -8,12 +8,6 @@
 
 }
 
-.githubIcon {
-/*	position: absolute;
-	bottom: 10px;*/
-	margin: 0px;
-}
-
 .card-text, .info-text {
 	color: black;
 }
@@ -26,14 +20,21 @@
 	margin: auto;
 }
 
-.navCard {
-	margin: 10px;
-}
-
 #headAppImg {
 	max-height: 250px;
+	height: auto;
 	width: auto;
 	margin: auto;
+}
+
+/*.githubIcon {
+	position: absolute;
+	bottom: 10px;
+	margin: 0px;
+}*/
+
+.navCard {
+	margin: 10px;
 }
 
 #navAppImg {
@@ -42,4 +43,8 @@
 	height: auto;
 	width: auto;
 	margin: auto;*/
+}
+
+.navCardTitle {
+	font-size: 16px;
 }
