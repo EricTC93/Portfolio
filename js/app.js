@@ -17,6 +17,16 @@ else {
 }
 
 const apps = [
+
+	{
+		title:"Character-Management",
+		link:"https://character-management-eed.herokuapp.com/",
+		github:"https://github.com/dpgallivan/Management-Creator",
+		description:"This application is a database storage application for users to store customizable character data for personal use or other users' critique.",
+		creator:"Co-Developer: Built out firebase database, design logic for storing and editing character attributes, implement login with google authentication",
+		img:"./img/Character-Management.PNG"
+	},
+
 	{
 		title:"News-Scraper",
 		link:"https://news-scraper-etc.herokuapp.com",
@@ -31,7 +41,7 @@ const apps = [
 		link:"https://flash-roulette-meed.herokuapp.com/",
 		github:"https://github.com/edricwong28/Flash-Roulette",
 		description:"A game of Flash Roulette.",
-		creator:"Co-Developer (Back-end)",
+		creator:"Co-Developer: Created the logic for the roulette, bets, and payout. Built out MySQL database and schema",
 		img:"./img/Roulette_Home.PNG"
 	},
 
@@ -103,7 +113,7 @@ const apps = [
 		link:"https://conditionschange.github.io/Right-Here-Right-Now/",
 		github:"https://github.com/ConditionsChange/Right-Here-Right-Now",
 		description:"User is bored and looking for something to do. User inputs location and something they might be interested in doing. Using various APIs, the app will pull up events, restaurants, movies, and other interesting happening in the area. It will also pull up the weather so that user can appropriately plan.",
-		creator:"Co-Developer",
+		creator:"Co-Developer: SeatGeek API integration",
 		img:"./img/Right-Here-Right-Now.PNG"
 	},
 
