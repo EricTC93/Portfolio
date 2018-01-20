@@ -96,7 +96,7 @@ const apps = [
 		github:"https://github.com/YETC7/liri-node-app",
 		description:"Language Interpretation and Recognition Interface. Uses node to take user input to output data.",
 		creator:"Sole Developer",
-		img:"./img/Node-Icon.png"
+		img:"./img/LIRI.PNG"
 	},
 
 	{
