@@ -28,7 +28,7 @@ const apps = [
 
 	{
 		title:"Burger-Eater",
-		link:"https://friend-finder-etc.herokuapp.com",
+		link:"https://burger-eater-etc.herokuapp.com",
 		github:"https://github.com/YETC7/Burger-Eater",
 		description:"Application that creates, reads and update data on a mysql server.",
 		creator:"Sole Developer",
@@ -148,7 +148,7 @@ for(let i = 0; i<apps.length; i++) {
 					<a href="${apps[i].link}" target="_blank">${apps[i].title}</a>
 				</h4>
 				<p class="card-text">${apps[i].description}</p>
-				<p class="info-text>${apps[i].creator}</p>
+				<p class="info-text">${apps[i].creator}</p>
 				<a class="githubIcon" href="${apps[i].github}" target="_blank"><img width="30px" height="auto" src="./img/githubIcon.png" alt=""></a>
 			</div>
 		</div>
