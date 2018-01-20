@@ -1,3 +1,21 @@
+let currentHour = moment().hour();
+
+if (currentHour < 6) {
+	$("#greeting").text("Hello fellow night owl");
+}
+
+else if (currentHour < 12) {
+	$("#greeting").text("Good Morning");
+}
+
+else if (currentHour < 18) {
+	$("#greeting").text("Good Afternoon");
+}
+
+else {
+	$("#greeting").text("Good Evening");
+}
+
 const apps = [
 	{
 		title:"News-Scraper",
