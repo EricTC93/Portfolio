@@ -51,7 +51,7 @@ const apps = [
 		github:"https://github.com/YETC7/Sequelized-Burger",
 		description:"A page that changes with user interaction that uses Sequelize.",
 		creator:"Sole Developer",
-		img:"./img/Burger-Eater.PNG"
+		img:"./img/Burger-Eater2.PNG"
 	},
 
 	{
