@@ -87,7 +87,7 @@ const apps = [
 		github:"https://github.com/YETC7/Flashcard-Generator",
 		description:"A javascript application that creates basics and cloze-deleted flashcards.",
 		creator:"Sole Developer",
-		img:"./img/Node-Icon.png"
+		img:"./img/flashcards.jpg"
 	},
 
 	{
